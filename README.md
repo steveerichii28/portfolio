@@ -1,2 +1,2 @@
-# my-first-project
+# portfolio
 My first project while learning Git and GitHub.
