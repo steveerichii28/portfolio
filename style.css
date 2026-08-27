@@ -1,0 +1,489 @@
+/* ================================
+   STEVE RICHI PORTFOLIO
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ================================
+   NAVIGATION
+   ================================ */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(8, 8, 8, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #222;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #4da6ff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4da6ff;
+}
+
+
+/* ================================
+   HERO
+   ================================ */
+
+.hero {
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: auto;
+    padding: 140px 30px 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-text {
+    max-width: 700px;
+}
+
+.small-text,
+.section-title {
+    color: #4da6ff;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 8vw, 90px);
+    line-height: 1.05;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #4da6ff;
+}
+
+.hero h2 {
+    font-size: 25px;
+    color: #dddddd;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #999999;
+    max-width: 600px;
+    font-size: 17px;
+}
+
+.buttons {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    background: #4da6ff;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(77, 166, 255, 0.25);
+}
+
+.btn.secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+
+/* ================================
+   PROFILE CIRCLE
+   ================================ */
+
+.hero-card {
+    width: 300px;
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background: radial-gradient(circle, #16283a, #080808 70%);
+    border: 1px solid #333;
+
+    box-shadow: 0 0 80px rgba(77, 166, 255, 0.15);
+}
+
+.circle {
+    width: 210px;
+    height: 210px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    border: 2px solid #4da6ff;
+
+    font-size: 55px;
+    font-weight: bold;
+    color: #4da6ff;
+}
+
+
+/* ================================
+   GENERAL SECTIONS
+   ================================ */
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 110px 30px;
+}
+
+.section h2 {
+    font-size: 42px;
+    margin: 10px 0 35px;
+}
+
+.about-text {
+    max-width: 800px;
+    color: #aaaaaa;
+    font-size: 18px;
+}
+
+
+/* ================================
+   SKILLS
+   ================================ */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.skill {
+    padding: 25px;
+    background: #101010;
+    border: 1px solid #222;
+    border-radius: 10px;
+    text-align: center;
+    color: #dddddd;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    border-color: #4da6ff;
+    transform: translateY(-5px);
+    color: #4da6ff;
+}
+
+
+/* ================================
+   EXPERIENCE
+   ================================ */
+
+.experience-card {
+    padding: 30px;
+    margin-bottom: 20px;
+    background: #101010;
+    border: 1px solid #222;
+    border-left: 3px solid #4da6ff;
+    border-radius: 8px;
+}
+
+.experience-card h3 {
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.company {
+    color: #4da6ff;
+    margin-bottom: 15px;
+}
+
+.experience-card p {
+    color: #999999;
+}
+
+
+/* ================================
+   PROJECT
+   ================================ */
+
+.project-card {
+    padding: 40px;
+    background: linear-gradient(145deg, #111111, #0b0b0b);
+    border: 1px solid #292929;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #4da6ff;
+}
+
+.project-number {
+    color: #4da6ff;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #999999;
+    max-width: 750px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.tags span {
+    padding: 7px 12px;
+    background: #181818;
+    border: 1px solid #333;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #bbbbbb;
+}
+
+
+/* ================================
+   EDUCATION
+   ================================ */
+
+.education-card {
+    padding: 25px;
+    margin-bottom: 15px;
+    background: #101010;
+    border: 1px solid #222;
+    border-radius: 8px;
+}
+
+.education-card h3 {
+    margin-bottom: 8px;
+}
+
+.education-card p {
+    color: #999999;
+}
+
+
+/* ================================
+   CERTIFICATIONS
+   ================================ */
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.cert {
+    padding: 25px;
+    background: #101010;
+    border: 1px solid #222;
+    border-radius: 8px;
+    color: #dddddd;
+    transition: 0.3s;
+}
+
+.cert:hover {
+    border-color: #4da6ff;
+}
+
+
+/* ================================
+   ACHIEVEMENTS
+   ================================ */
+
+.achievement-card {
+    padding: 30px;
+    background: #101010;
+    border: 1px solid #222;
+    border-radius: 10px;
+}
+
+.achievement-card p {
+    padding: 10px 0;
+    color: #bbbbbb;
+}
+
+
+/* ================================
+   CONTACT
+   ================================ */
+
+.contact {
+    text-align: center;
+    padding: 120px 30px;
+    background: #0d0d0d;
+}
+
+.contact h2 {
+    font-size: 55px;
+    margin: 10px 0;
+}
+
+.contact p {
+    color: #999999;
+    margin-bottom: 30px;
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #222;
+    color: #666666;
+    font-size: 13px;
+}
+
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 800px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 150px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .hero-card {
+        width: 230px;
+        height: 230px;
+    }
+
+    .circle {
+        width: 160px;
+        height: 160px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section h2 {
+        font-size: 32px;
+    }
+
+    .contact h2 {
+        font-size: 40px;
+    }
+}
+/* ================================
+   SCROLL ANIMATIONS
+   ================================ */
+
+.section,
+.contact {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.show,
+.contact.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ================================
+   SCROLL ANIMATIONS
+   ================================ */
+
+.section,
+.contact {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.show,
+.contact.show {
+    opacity: 1;
+    transform: translateY(0);
+}
